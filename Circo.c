@@ -17,11 +17,11 @@ int main(void) {
     tela_principal();
     tela_sobre();
     tela_equipe();
-    tela_menu_artista(void);
-    tela_cadastrar_artista(void);
-    tela_consultar_artista(void);
-    tela_alterar_artista(void);
-    tela_excluir_artista(void);
+    tela_menu_artista();
+    tela_cadastrar_artista();
+    tela_consultar_artista();
+    tela_alterar_artista();
+    tela_excluir_artista();
     return 0;
 }
 
