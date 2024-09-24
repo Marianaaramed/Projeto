@@ -42,11 +42,10 @@ void tela_principal(void) {
     printf("///                                                                         ///\n");
     printf("///              = = = Sistema de Gestão pra um Circo = = =                 ///\n");
     printf("///                                                                         ///\n");
-    printf("///            1. Módulo Cliente                                            ///\n");
-    printf("///            2. Módulo Artista                                            ///\n");
+    printf("///            1. Módulo Artista                                            ///\n");
+    printf("///            2. Módulo Espetáculo                                         ///\n");
     printf("///            3. Módulo Venda de Ingresso                                  ///\n");
-    printf("///            4. Módulo Agendamento de Apresentações                       ///\n");
-    printf("///            5. Módulo Relatórios                                         ///\n");
+    printf("///            4. Módulo Relatórios                                         ///\n");
     printf("///            0. Sair                                                      ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
