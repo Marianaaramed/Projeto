@@ -1,15 +1,27 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /// Assinatura das funções
 void tela_principal(void);
 void tela_sobre(void);
 void tela_equipe(void);
+void tela_menu_artista(void);
+void tela_cadastrar_artista(void);
+void tela_consultar_artista(void);
+void tela_alterar_artista(void);
+void tela_excluir_artista(void);
+
 
 /// Programa principal
 int main(void) {
     tela_principal();
     tela_sobre();
     tela_equipe();
+    tela_menu_artista(void);
+    tela_cadastrar_artista(void);
+    tela_consultar_artista(void);
+    tela_alterar_artista(void);
+    tela_excluir_artista(void);
     return 0;
 }
 
