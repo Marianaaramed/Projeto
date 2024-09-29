@@ -138,7 +138,7 @@ void tela_consultar_artista(void) {
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
-    printf("///            = = = = = = = = Pesquisar Artista = = = = = = =              ///\n");
+    printf("///            = = = = = = = = Consultar Artista = = = = = = =              ///\n");
     printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
     printf("///                                                                         ///\n");
     printf("///            Informe o ID (apenas números):                               ///\n");
