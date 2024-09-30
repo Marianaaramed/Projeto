@@ -45,6 +45,7 @@ int main(void) {
 /// Funções
 
 void tela_principal(void) {
+    char op;
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
@@ -64,6 +65,9 @@ void tela_principal(void) {
     printf("///            4. Módulo Relatórios                                         ///\n");
     printf("///            0. Sair                                                      ///\n");
     printf("///                                                                         ///\n");
+    printf("///            Escolher a opção desejada: ");  
+    scanf("%c", &op);
+    getchar();
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
 }
