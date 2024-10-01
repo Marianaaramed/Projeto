@@ -243,6 +243,7 @@ void tela_excluir_artista(void) {
 
 
 void tela_menu_espetaculo(void) {
+    char op;
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -268,6 +269,9 @@ void tela_menu_espetaculo(void) {
 
 
 void tela_cadastrar_espetaculo(void) {
+    char id[12];
+    char data[11];
+    char op;
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -276,9 +280,13 @@ void tela_cadastrar_espetaculo(void) {
     printf("///            = = = = = = = Cadastrar Espetáculo = = = = = =               ///\n");
     printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
     printf("///                                                                         ///\n");
-    printf("///            ID (apenas números):                                         ///\n");
-    printf("///            Data (dd/mm/aaaa):                                           ///\n");
-    printf("///            Horário:                                                     ///\n");
+    printf("///            ID (apenas números):    ");
+    scanf("%[0-9]", id);
+    getchar();
+    printf("///            Data (dd/mm/aaaa):      ");
+    scanf("%[0-9]", data);
+    getchar();
+    printf("///            Horário:                ");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
