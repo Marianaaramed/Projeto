@@ -110,6 +110,7 @@ void tela_principal(void) {
 
 
 void tela_menu_artista(void) {
+    char op;
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -124,7 +125,9 @@ void tela_menu_artista(void) {
     printf("///            4. Excluir um artista do sistema                             ///\n");
     printf("///            0. Voltar ao menu anterior                                   ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Escolha a opção desejada:                                    ///\n");
+    printf("///            Escolha a opção desejada:   ");
+    scanf("%c", &op);
+    getchar();
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -135,6 +138,12 @@ void tela_menu_artista(void) {
 
 
 void tela_cadastrar_artista(void) {
+    char id[12];
+    char nome[51];
+    char cpf[12];    
+    char email[30];
+    char celular[12];
+    char cargo[30];
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -143,11 +152,21 @@ void tela_cadastrar_artista(void) {
     printf("///            = = = = = = = = Cadastrar Artista = = = = = = =              ///\n");
     printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
     printf("///                                                                         ///\n");
-    printf("///            ID (apenas números):                                         ///\n");
-    printf("///            Nome completo:                                               ///\n");
-    printf("///            E-mail:                                                      ///\n");
-    printf("///            Celular (apenas números):                                   ///\n");
-    printf("///            Cargo:                                                       ///\n");
+    printf("///            ID (apenas números):    ");
+    scanf("%[0-9]", id);
+    getchar();
+    printf("///            Nome completo:          ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
+    getchar();
+    printf("///            E-mail:                 ");
+    scanf("%[A-Za-z0-9@._]", email);
+    getchar();
+    printf("///            Celular (apenas números):    ");
+    scanf("%[0-9]", celular);
+    getchar();
+    printf("///            Cargo:                  ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", cargo);
+    getchar();
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -166,7 +185,30 @@ void tela_consultar_artista(void) {
     printf("///            = = = = = = = = Consultar Artista = = = = = = =              ///\n");
     printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Informe o ID (apenas números):                               ///\n");
+    printf("///            Informe o ID (apenas números):    ");
+    scanf("%[0-9]", id);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+
+void tela_alterar_artista(void) {
+    system("clear||cls");
+    printf("\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
+    printf("///            = = = = = = = = Alterar Artista = = = = = = = =              ///\n");
+    printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Informe o ID (apenas números):    ");
+    scanf("%[0-9]", id);
+    getchar();
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -185,7 +227,9 @@ void tela_excluir_artista(void) {
     printf("///            = = = = = = = = Excluir Artista = = = = = = = =              ///\n");
     printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Informe o ID (apenas números):                               ///\n");
+    printf("///            Informe o ID (apenas números):    ");
+    scanf("%[0-9]", id);
+    getchar();
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
