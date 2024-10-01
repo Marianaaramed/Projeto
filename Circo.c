@@ -177,6 +177,7 @@ void tela_cadastrar_artista(void) {
 
 
 void tela_consultar_artista(void) {
+    char id[12];
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -198,6 +199,7 @@ void tela_consultar_artista(void) {
 
 
 void tela_alterar_artista(void) {
+    char id[12];
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -219,6 +221,7 @@ void tela_alterar_artista(void) {
 
 
 void tela_excluir_artista(void) {
+     char id[12];
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
