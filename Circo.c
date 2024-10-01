@@ -271,6 +271,7 @@ void tela_menu_espetaculo(void) {
 void tela_cadastrar_espetaculo(void) {
     char id[12];
     char data[11];
+    char horario[]
     char op;
     system("clear||cls");
     printf("\n");
@@ -287,6 +288,8 @@ void tela_cadastrar_espetaculo(void) {
     scanf("%[0-9]", data);
     getchar();
     printf("///            Horário:                ");
+    scanf("%[A-Za-z:]", horario);
+    getchar();
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -367,8 +370,8 @@ void tela_comprar_ingresso(void) {
     printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
     printf("///                                                                         ///\n");
     printf("///            ID (apenas números):                                         ///\n");
-    printf("///            Preço:                                                       ///\n");
-    printf("///            Quantidade:                                                  ///\n");
+    printf("///            Preço (apenas números):                                      ///\n");
+    printf("///            Quantidade (apenas números):                                 ///\n");
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
