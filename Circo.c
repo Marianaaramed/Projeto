@@ -46,6 +46,7 @@ int main(void) {
 
 void tela_principal(void) {
     char op;
+    system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
@@ -69,11 +70,13 @@ void tela_principal(void) {
     scanf("%c", &op);
     getchar();
     printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
 }
 
 
 void tela_sobre(void) {
+    system("clear||cls");
     printf("\n");    
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
@@ -84,11 +87,13 @@ void tela_sobre(void) {
     printf("///  apresentações.                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
 }
 
 
 void tela_equipe(void) {
+    system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
