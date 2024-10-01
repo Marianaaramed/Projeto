@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /// Assinatura das funções
-void tela_principal(void);
 void tela_sobre(void);
 void tela_equipe(void);
+void tela_principal(void);
 void tela_menu_artista(void);
 void tela_cadastrar_artista(void);
 void tela_consultar_artista(void);
@@ -22,9 +22,9 @@ void tela_reembolsar_ingresso(void);
 
 /// Programa principal
 int main(void) {
-    tela_principal();
     tela_sobre();
     tela_equipe();
+    tela_principal();
     tela_menu_artista();
     tela_cadastrar_artista();
     tela_consultar_artista();
@@ -43,37 +43,6 @@ int main(void) {
 
 
 /// Funções
-
-void tela_principal(void) {
-    char op;
-    system("clear||cls");
-    printf("\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                         ///\n");
-    printf("///             Universidade Federal do Rio Grande do Norte                 ///\n");
-    printf("///                 Centro de Ensino Superior do Seridó                     ///\n");
-    printf("///               Departamento de Computação e Tecnologia                   ///\n");
-    printf("///                  Disciplina DCT1106 -- Programação                      ///\n");
-    printf("///                  Sistema de Gestão para um Circo                        ///\n");
-    printf("///                                                                         ///\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                         ///\n");
-    printf("///              = = = Sistema de Gestão pra um Circo = = =                 ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            1. Módulo Artista                                            ///\n");
-    printf("///            2. Módulo Espetáculo                                         ///\n");
-    printf("///            3. Módulo Ingresso                                           ///\n");
-    printf("///            4. Módulo Relatórios                                         ///\n");
-    printf("///            0. Sair                                                      ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            Escolher a opção desejada: ");  
-    scanf("%c", &op);
-    getchar();
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-}
-
 
 void tela_sobre(void) {
     system("clear||cls");
@@ -107,6 +76,37 @@ void tela_equipe(void) {
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
 } 
+
+
+void tela_principal(void) {
+    char op;
+    system("clear||cls");
+    printf("\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///             Universidade Federal do Rio Grande do Norte                 ///\n");
+    printf("///                 Centro de Ensino Superior do Seridó                     ///\n");
+    printf("///               Departamento de Computação e Tecnologia                   ///\n");
+    printf("///                  Disciplina DCT1106 -- Programação                      ///\n");
+    printf("///                  Sistema de Gestão para um Circo                        ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///              = = = Sistema de Gestão pra um Circo = = =                 ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            1. Módulo Artista                                            ///\n");
+    printf("///            2. Módulo Espetáculo                                         ///\n");
+    printf("///            3. Módulo Ingresso                                           ///\n");
+    printf("///            4. Módulo Relatórios                                         ///\n");
+    printf("///            0. Sair                                                      ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Escolher a opção desejada: ");  
+    scanf("%c", &op);
+    getchar();
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
 
 
 void tela_menu_artista(void) {
