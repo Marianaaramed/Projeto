@@ -139,8 +139,7 @@ void tela_menu_artista(void) {
 
 void tela_cadastrar_artista(void) {
     char id[12];
-    char nome[51];
-    char cpf[12];    
+    char nome[51];    
     char email[30];
     char celular[12];
     char cargo[30];
@@ -270,8 +269,8 @@ void tela_menu_espetaculo(void) {
 
 void tela_cadastrar_espetaculo(void) {
     char id[12];
-    char data[11];
-    char horario[]
+    char data[12];
+    char horario[9]
     char op;
     system("clear||cls");
     printf("\n");
@@ -285,10 +284,10 @@ void tela_cadastrar_espetaculo(void) {
     scanf("%[0-9]", id);
     getchar();
     printf("///            Data (dd/mm/aaaa):      ");
-    scanf("%[0-9]", data);
+    scanf("%[0-9/]", data);
     getchar();
-    printf("///            Horário:                ");
-    scanf("%[A-Za-z:]", horario);
+    printf("///            Horário (hh/mm/ss):     ");
+    scanf("%[0-9:]", horario);
     getchar();
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
@@ -300,6 +299,7 @@ void tela_cadastrar_espetaculo(void) {
 
 
 void tela_consultar_espetaculo(void) {
+    char id[12];
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -308,7 +308,31 @@ void tela_consultar_espetaculo(void) {
     printf("///            = = = = = = = Consultar Espetáculo = = = = = = =             ///\n");
     printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Informe o ID (apenas números):                               ///\n");
+    printf("///            Informe o ID (apenas números):     ");
+    scanf("%[0-9]", id);
+    getchar();
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+
+void tela_alterar_espetaculo(void) {
+    char id[12];
+    system("clear||cls");
+    printf("\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
+    printf("///            = = = = = = = Consultar Espetáculo = = = = = = =             ///\n");
+    printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Informe o ID (apenas números):    ");
+    scanf("%[0-9]", id);
+    getchar();
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -319,6 +343,7 @@ void tela_consultar_espetaculo(void) {
 
 
 void tela_excluir_espetaculo(void) {
+    char id[12];
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -327,7 +352,9 @@ void tela_excluir_espetaculo(void) {
     printf("///            = = = = = = = = Excluir Espetáculo = = = = = = =             ///\n");
     printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Informe o ID (apenas números):                               ///\n");
+    printf("///            Informe o ID (apenas números):     ");
+    scanf("%[0-9]", id);
+    getchar();
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -338,6 +365,7 @@ void tela_excluir_espetaculo(void) {
 
 
 void tela_menu_ingresso(void) {
+    char op;
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -361,6 +389,9 @@ void tela_menu_ingresso(void) {
 
 
 void tela_comprar_ingresso(void) {
+    char id[12];
+    char preco[3];
+    char quantidade[2];
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -369,7 +400,9 @@ void tela_comprar_ingresso(void) {
     printf("///            = = = = = = = = Comprar ingresso = = = = = = =               ///\n");
     printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
     printf("///                                                                         ///\n");
-    printf("///            ID (apenas números):                                         ///\n");
+    printf("///            ID (apenas números):    ");
+    scanf("%[0-9]", id);
+    getchar();
     printf("///            Preço (apenas números):                                      ///\n");
     printf("///            Quantidade (apenas números):                                 ///\n");
     printf("///                                                                         ///\n");
@@ -382,6 +415,7 @@ void tela_comprar_ingresso(void) {
 
 
 void tela_reembolsar_ingresso(void) {
+    char id[12];
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -390,7 +424,9 @@ void tela_reembolsar_ingresso(void) {
     printf("///            = = = = = = = = Reembolsar ingresso = = = = = =              ///\n");
     printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Informe o ID (apenas números):                               ///\n");
+    printf("///            Informe o ID (apenas números):   ");
+    scanf("%[0-9]", id);
+    getchar();
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
