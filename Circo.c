@@ -403,8 +403,12 @@ void tela_comprar_ingresso(void) {
     printf("///            ID (apenas números):    ");
     scanf("%[0-9]", id);
     getchar();
-    printf("///            Preço (apenas números):                                      ///\n");
-    printf("///            Quantidade (apenas números):                                 ///\n");
+    printf("///            Preço (apenas números):    ");
+    scanf("%[0-9]", preco);
+    getchar();
+    printf("///            Quantidade (apenas números):     ");
+    scanf("%[0-9]", quantidade);
+    getchar();
     printf("///                                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
