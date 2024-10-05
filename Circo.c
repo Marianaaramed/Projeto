@@ -104,8 +104,10 @@ void tela_principal(void) {
     scanf("%c", &op);
     getchar();
     printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
+    return op;
 }
 
 
@@ -264,6 +266,7 @@ void tela_menu_espetaculo(void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
+    return op;
 }
 
 
@@ -385,6 +388,7 @@ void tela_menu_ingresso(void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
+    return op;
 }
 
 
