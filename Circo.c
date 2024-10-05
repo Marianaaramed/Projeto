@@ -56,6 +56,7 @@ void tela_sobre(void) {
     printf("///  apresentações.                                                         ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
@@ -75,6 +76,8 @@ void tela_equipe(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
 } 
 
 
@@ -136,6 +139,7 @@ void tela_menu_artista(void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
+    return op;
 }
 
 
@@ -273,8 +277,7 @@ void tela_menu_espetaculo(void) {
 void tela_cadastrar_espetaculo(void) {
     char id[12];
     char data[12];
-    char horario[9]
-    char op;
+    char horario[9];
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
