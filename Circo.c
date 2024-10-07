@@ -110,7 +110,6 @@ void tela_principal(void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
-    return op;
 }
 
 
@@ -139,7 +138,6 @@ void tela_menu_artista(void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
-    return op;
 }
 
 
@@ -270,7 +268,6 @@ void tela_menu_espetaculo(void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
-    return op;
 }
 
 
@@ -391,7 +388,6 @@ void tela_menu_ingresso(void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
-    return op;
 }
 
 
