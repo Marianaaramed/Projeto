@@ -1,45 +1,51 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 /// Assinatura das funções
 void tela_sobre(void);
 void tela_equipe(void);
-void tela_principal(void);
-void tela_menu_artista(void);
-void tela_cadastrar_artista(void);
-void tela_consultar_artista(void);
-void tela_alterar_artista(void);
-void tela_excluir_artista(void);
-void tela_menu_espetaculo(void);
-void tela_cadastrar_espetaculo(void);
-void tela_consultar_espetaculo(void);
-void tela_alterar_espetaculo(void);
-void tela_excluir_espetaculo(void);
-void tela_menu_ingresso(void);
-void tela_comprar_ingresso(void);
-void tela_reembolsar_ingresso(void);
+char tela_principal(void);
+void modulo_artista(void);
+char tela_menu_artista(void);
+char tela_cadastrar_artista(void);
+char tela_consultar_artista(void);
+char tela_alterar_artista(void);
+char tela_excluir_artista(void);
+void modulo_espetaculo(void);
+char tela_menu_espetaculo(void);
+char tela_cadastrar_espetaculo(void);
+char tela_consultar_espetaculo(void);
+char tela_alterar_espetaculo(void);
+char tela_excluir_espetaculo(void);
+void modulo_ingresso(void);
+char tela_menu_ingresso(void);
+char tela_comprar_ingresso(void);
+char tela_reembolsar_ingresso(void);
 
 
 /// Programa principal
 int main(void) {
-    tela_sobre();
-    tela_equipe();
-    tela_principal();
-    tela_menu_artista();
-    tela_cadastrar_artista();
-    tela_consultar_artista();
-    tela_alterar_artista();
-    tela_excluir_artista();
-    tela_menu_espetaculo();
-    tela_cadastrar_espetaculo();
-    tela_consultar_espetaculo();
-    tela_alterar_espetaculo();
-    tela_excluir_espetaculo();
-    tela_menu_ingresso();
-    tela_comprar_ingresso();
-    tela_reembolsar_ingresso();  
+    char opcao;
+    do {
+        opcao = telaPrincipal();
+        switch(opcao) {
+            case '1':   modulo_artista();
+                        break;
+            case '2':   modulo_espetaculo();
+                        break;
+            case '3':   modulo_ingresso();
+                        break;
+            case '4':   // Módulo Relatórios
+                        break;
+            case '5':   telaSobre();
+                        telaEquipe();
+                        break;
+        } 	
+    } while (opcao != '0');
+    
     return 0;
-}
+}    
 
 
 /// Funções
@@ -81,7 +87,7 @@ void tela_equipe(void) {
 } 
 
 
-void tela_principal(void) {
+char tela_principal(void) {
     char op;
     system("clear||cls");
     printf("\n");
@@ -108,12 +114,33 @@ void tela_principal(void) {
     getchar();
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
+    return op;
 }
 
 
-void tela_menu_artista(void) {
+/// Funções do Módulo Artista  
+
+void modulo_artista(void) {
+    char opcao;
+    do {
+        opcao = tela_menu_artista();
+        switch(opcao) {
+            case '1': 	tela_cadastrar_artista();
+                        break;
+            case '2': 	tela_consultar_artista();
+                        break;
+            case '3': 	tela_alterar_artista();
+                        break;
+            case '4': 	tela_excluir_artista();
+                        break;
+        } 		
+    } while (opcao != '0');
+}
+
+
+char tela_menu_artista(void) {
     char op;
     system("clear||cls");
     printf("\n");
@@ -124,8 +151,8 @@ void tela_menu_artista(void) {
     printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
     printf("///                                                                         ///\n");
     printf("///            1. Cadastrar um novo artista                                 ///\n");
-    printf("///            2. Pesquisar os dados de um artista                          ///\n");
-    printf("///            3. Atualizar o cadastro de um artista                        ///\n");
+    printf("///            2. Consultar os dados de um artista                          ///\n");
+    printf("///            3. Alterar o cadastro de um artista                          ///\n");
     printf("///            4. Excluir um artista do sistema                             ///\n");
     printf("///            0. Voltar ao menu anterior                                   ///\n");
     printf("///                                                                         ///\n");
@@ -136,12 +163,13 @@ void tela_menu_artista(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
+    return op;
 }
 
 
-void tela_cadastrar_artista(void) {
+char tela_cadastrar_artista(void) {
     char id[12];
     char nome[51];    
     char email[30];
@@ -174,12 +202,12 @@ void tela_cadastrar_artista(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
 }
 
 
-void tela_consultar_artista(void) {
+char tela_consultar_artista(void) {
     char id[12];
     system("clear||cls");
     printf("\n");
@@ -196,12 +224,12 @@ void tela_consultar_artista(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
 }
 
 
-void tela_alterar_artista(void) {
+char tela_alterar_artista(void) {
     char id[12];
     system("clear||cls");
     printf("\n");
@@ -218,12 +246,12 @@ void tela_alterar_artista(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
 }
 
 
-void tela_excluir_artista(void) {
+char tela_excluir_artista(void) {
      char id[12];
     system("clear||cls");
     printf("\n");
@@ -240,12 +268,32 @@ void tela_excluir_artista(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
 }
 
 
-void tela_menu_espetaculo(void) {
+/// Funções do Módulo espetaculo 
+
+void modulo_espetaculo(void) {
+    char opcao;
+    do {
+        opcao = tela_menu_espetaculo();
+        switch(opcao) {
+            case '1': 	tela_cadastrar_espetaculo();
+                        break;
+            case '2': 	tela_consultar_espetaculo();
+                        break;
+            case '3': 	tela_alterar_espetaculo();
+                        break;
+            case '4': 	tela_excluir_espetaculo();
+                        break;
+        } 		
+    } while (opcao != '0');
+}
+
+
+char tela_menu_espetaculo(void) {
     char op;
     system("clear||cls");
     printf("\n");
@@ -266,12 +314,12 @@ void tela_menu_espetaculo(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
 }
 
 
-void tela_cadastrar_espetaculo(void) {
+char tela_cadastrar_espetaculo(void) {
     char id[12];
     char data[12];
     char horario[9];
@@ -296,12 +344,12 @@ void tela_cadastrar_espetaculo(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
 }
 
 
-void tela_consultar_espetaculo(void) {
+char tela_consultar_espetaculo(void) {
     char id[12];
     system("clear||cls");
     printf("\n");
@@ -318,12 +366,12 @@ void tela_consultar_espetaculo(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
 }
 
 
-void tela_alterar_espetaculo(void) {
+char tela_alterar_espetaculo(void) {
     char id[12];
     system("clear||cls");
     printf("\n");
@@ -340,12 +388,12 @@ void tela_alterar_espetaculo(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
 }
 
 
-void tela_excluir_espetaculo(void) {
+char tela_excluir_espetaculo(void) {
     char id[12];
     system("clear||cls");
     printf("\n");
@@ -362,12 +410,28 @@ void tela_excluir_espetaculo(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
 }
 
 
-void tela_menu_ingresso(void) {
+/// Funções do Módulo ingresso 
+
+void modulo_ingresso(void) {
+    char opcao;
+    do {
+        opcao = tela_menu_ingresso();
+        switch(opcao) {
+            case '1': 	tela_comprar_ingresso();
+                        break;
+            case '2': 	tela_reembolsar_ingresso();
+                        break;            
+        } 		
+    } while (opcao != '0');
+}
+
+
+char tela_menu_ingresso(void) {
     char op;
     system("clear||cls");
     printf("\n");
@@ -386,12 +450,12 @@ void tela_menu_ingresso(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
 }
 
 
-void tela_comprar_ingresso(void) {
+char tela_comprar_ingresso(void) {
     char id[12];
     char preco[3];
     char quantidade[2];
@@ -416,12 +480,12 @@ void tela_comprar_ingresso(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
 }
 
 
-void tela_reembolsar_ingresso(void) {
+char tela_reembolsar_ingresso(void) {
     char id[12];
     system("clear||cls");
     printf("\n");
@@ -438,6 +502,6 @@ void tela_reembolsar_ingresso(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
+    printf("\t\t\t<<< ... Aguarde ... >>>\n");
+    sleep(1);
 }
