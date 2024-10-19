@@ -8,20 +8,22 @@ void tela_equipe(void);
 char tela_principal(void);
 void modulo_artista(void);
 char tela_menu_artista(void);
-char tela_cadastrar_artista(void);
-char tela_consultar_artista(void);
-char tela_alterar_artista(void);
-char tela_excluir_artista(void);
+void tela_cadastrar_artista(void);
+void tela_consultar_artista(void);
+void tela_alterar_artista(void);
+void tela_excluir_artista(void);
 void modulo_espetaculo(void);
 char tela_menu_espetaculo(void);
-char tela_cadastrar_espetaculo(void);
-char tela_consultar_espetaculo(void);
-char tela_alterar_espetaculo(void);
-char tela_excluir_espetaculo(void);
+void tela_cadastrar_espetaculo(void);
+void tela_consultar_espetaculo(void);
+void tela_alterar_espetaculo(void);
+void tela_excluir_espetaculo(void);
 void modulo_ingresso(void);
 char tela_menu_ingresso(void);
-char tela_comprar_ingresso(void);
-char tela_reembolsar_ingresso(void);
+void tela_comprar_ingresso(void);
+void tela_reembolsar_ingresso(void);
+void moduloRelatorio(void);
+void delay(int);
 
 
 /// Programa principal
@@ -120,6 +122,18 @@ char tela_principal(void) {
 }
 
 
+
+
+
+void delay(int segundos) {
+  int tempo = 500000 * segundos;
+  clock_t inicio = clock();
+  while (clock() < inicio + tempo) {
+    // não faz nada, apenas gasta tempo
+  }
+}
+
+
 /// Funções do Módulo Artista  
 
 void modulo_artista(void) {
@@ -164,12 +178,12 @@ char tela_menu_artista(void) {
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
     printf("\t\t\t<<< ... Aguarde ... >>>\n");
-    sleep(1);
+    delay(1);
     return op;
 }
 
 
-char tela_cadastrar_artista(void) {
+void tela_cadastrar_artista(void) {
     char id[12];
     char nome[51];    
     char email[30];
@@ -203,11 +217,11 @@ char tela_cadastrar_artista(void) {
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
     printf("\t\t\t<<< ... Aguarde ... >>>\n");
-    sleep(1);
+    delay(1);
 }
 
 
-char tela_consultar_artista(void) {
+void tela_consultar_artista(void) {
     char id[12];
     system("clear||cls");
     printf("\n");
@@ -225,11 +239,11 @@ char tela_consultar_artista(void) {
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
     printf("\t\t\t<<< ... Aguarde ... >>>\n");
-    sleep(1);
+    delay(1);
 }
 
 
-char tela_alterar_artista(void) {
+void tela_alterar_artista(void) {
     char id[12];
     system("clear||cls");
     printf("\n");
@@ -247,11 +261,11 @@ char tela_alterar_artista(void) {
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
     printf("\t\t\t<<< ... Aguarde ... >>>\n");
-    sleep(1);
+    delay(1);
 }
 
 
-char tela_excluir_artista(void) {
+void tela_excluir_artista(void) {
      char id[12];
     system("clear||cls");
     printf("\n");
@@ -269,7 +283,7 @@ char tela_excluir_artista(void) {
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
     printf("\t\t\t<<< ... Aguarde ... >>>\n");
-    sleep(1);
+    delay(1);
 }
 
 
@@ -315,11 +329,12 @@ char tela_menu_espetaculo(void) {
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
     printf("\t\t\t<<< ... Aguarde ... >>>\n");
-    sleep(1);
+    delay(1);
+    return op;
 }
 
 
-char tela_cadastrar_espetaculo(void) {
+void tela_cadastrar_espetaculo(void) {
     char id[12];
     char data[12];
     char horario[9];
@@ -345,11 +360,11 @@ char tela_cadastrar_espetaculo(void) {
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
     printf("\t\t\t<<< ... Aguarde ... >>>\n");
-    sleep(1);
+    delay(1);
 }
 
 
-char tela_consultar_espetaculo(void) {
+void tela_consultar_espetaculo(void) {
     char id[12];
     system("clear||cls");
     printf("\n");
@@ -367,11 +382,11 @@ char tela_consultar_espetaculo(void) {
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
     printf("\t\t\t<<< ... Aguarde ... >>>\n");
-    sleep(1);
+    delay(1);
 }
 
 
-char tela_alterar_espetaculo(void) {
+void tela_alterar_espetaculo(void) {
     char id[12];
     system("clear||cls");
     printf("\n");
@@ -389,11 +404,11 @@ char tela_alterar_espetaculo(void) {
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
     printf("\t\t\t<<< ... Aguarde ... >>>\n");
-    sleep(1);
+    delay(1);
 }
 
 
-char tela_excluir_espetaculo(void) {
+void tela_excluir_espetaculo(void) {
     char id[12];
     system("clear||cls");
     printf("\n");
@@ -411,7 +426,7 @@ char tela_excluir_espetaculo(void) {
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
     printf("\t\t\t<<< ... Aguarde ... >>>\n");
-    sleep(1);
+    delay(1);
 }
 
 
@@ -451,11 +466,12 @@ char tela_menu_ingresso(void) {
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
     printf("\t\t\t<<< ... Aguarde ... >>>\n");
-    sleep(1);
+    delay(1);
+    return op;
 }
 
 
-char tela_comprar_ingresso(void) {
+void tela_comprar_ingresso(void) {
     char id[12];
     char preco[3];
     char quantidade[2];
@@ -481,11 +497,11 @@ char tela_comprar_ingresso(void) {
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
     printf("\t\t\t<<< ... Aguarde ... >>>\n");
-    sleep(1);
+    delay(1);
 }
 
 
-char tela_reembolsar_ingresso(void) {
+void tela_reembolsar_ingresso(void) {
     char id[12];
     system("clear||cls");
     printf("\n");
@@ -503,5 +519,11 @@ char tela_reembolsar_ingresso(void) {
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
     printf("\t\t\t<<< ... Aguarde ... >>>\n");
-    sleep(1);
+    delay(1);
+}
+
+
+void moduloRelatorio(void) {
+	// modulo em desenvolvimento
+
 }
